@@ -1,0 +1,23 @@
+<h1 class="font-weight-bold text-success text-center">ToDo </h1>
+<app-navbar></app-navbar>
+
+<div class="row justify-content-center" >
+    <!-- <div class="col-2" > -->
+        <div class="col-3 card m-2 " style="width: 18rem;box-shadow: 5px 5px 10px 0px rgba(0, 0, 0, 0.5);" *ngFor="let i of data" >
+            <img class="card-img-top " src="{{i.file}}" height="300px" alt="Card image cap" style="width: 75%;">
+            <div class="card-body">
+              <h5 class="card-title">{{i.title|uppercase}}</h5>
+              <p class="card-text">{{i.desc}}</p>
+            </div>
+            <ul class="list-group list-group-flush">
+              <!-- <li class="list-group-item">{{i.price|currency:'INR'}}</li> -->
+              <li class="list-group-item">{{i.date}}</li>
+              <!-- <li class="list-group-item">Vestibulum at eros</li> -->
+            </ul>
+            <div class="card-body">
+              <!-- <button id="{{i.id}}" class="btn btn-success" (click)="pdetails($event)">Card link</button> -->
+              <button class="btn btn-danger" id="{{i.id}}" (click)="deleteTodo($event)">Delete</button>
+            </div>
+          </div>
+    <!-- </div> -->
+</div>
